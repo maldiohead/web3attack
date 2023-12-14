@@ -2,7 +2,7 @@
 
 ## Description
 
-this is a reproduce of the attack Arbitrary Address Spoofing Attack by nolan@exvul(https://twitter.com/home)
+this is a reproduce of the attack Arbitrary Address Spoofing Attack by nolan@exvul(https://twitter.com/ma1fan)
 
 reference: https://blog.openzeppelin.com/arbitrary-address-spoofing-vulnerability-erc2771context-multicall-public-disclosure
 

@@ -4,5 +4,5 @@ out = "out"
 libs = ["lib"]
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
-remappings = ["@openzeppelin/=lib/openzeppelin-contracts/","@multicall/=lib/multicall/"]
+remappings = ["@openzeppelin1/contracts/=lib/openzeppelin-contracts/contracts/","@multicall/=lib/multicall/","@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/"]
 

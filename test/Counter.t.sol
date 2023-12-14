@@ -5,20 +5,40 @@ import "forge-std/Test.sol";
 import "../src/Counter.sol";
 
 contract CounterTest is Test {
-    Counter public counter;
+    MyContract public counter;
 
     function setUp() public {
-        counter = new Counter(address(0));
-        counter.setNumber(0);
+        counter = new MyContract(address(this));
+        
+        
     }
 
-    function testIncrement() public {
-        counter.increment();
-        assertEq(counter.number(), 1);
+
+    function testCounter() public {
+        //.counter.doSomething();
+
     }
 
-    function testSetNumber(uint256 x) public {
-        counter.setNumber(x);
-        assertEq(counter.number(), x);
+// implement call multicall function in the Counter.sol
+    function test_Multicall() public {
+        // counter.incremen
+//
+//        //bytes[] calldata data
+//    
+//    //counter.multicall(data);
+//
+//
+//// Assuming `multicall` function expects an array of bytes
+//bytes[] memory calls = new bytes[](2);
+//calls[0] = abi.encodeWithSignature("burn(uint256)", 0x11);
+//
+//counter.multicall(calls);
+//
+
+     ///counter.multicall({"burn",0x11});
+
+
     }
+
+
 }

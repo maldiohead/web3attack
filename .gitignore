@@ -13,3 +13,8 @@ docs/
 
 # Dotenv file
 .env
+
+.github/
+.vscode/
+.deps/
+

@@ -2,7 +2,7 @@
 
 ## Description
 
-this  project will public some bugs I found. follow me at X (@ma1fan)
+this  project will public some bugs I found or some important bugs PoC. follow me at X (@ma1fan)
 
 ## Bugs
 

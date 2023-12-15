@@ -45,9 +45,10 @@ forge create src/Forward.sol:Forwarder --private-key=<PRIVATE_KEY>
 forge create src/Counter.sol:MyContract --private-key=<PRIVATE_KEY>  --constructor-args <FORWARD_ADDRESS>   
 ```
 
-- edit the contract , change the token address, Forward address, attack address ,victim address, and privatekey and then run the command:
+- edit the src/attack.js: change the token address, Forward address, attack address ,victim address, and privatekey and then run the command:
 
 ```bash
+cd src/
 node attack.js
 ```
 

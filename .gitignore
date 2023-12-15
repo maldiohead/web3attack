@@ -17,4 +17,4 @@ docs/
 .github/
 .vscode/
 .deps/
-
+.DS_Store

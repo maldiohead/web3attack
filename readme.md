@@ -1,68 +1,22 @@
-# ERC2771 & Multicall attack PoC
+# Address Spoofing Attack
 
 ## Description
 
-this is a reproduce of the attack Arbitrary Address Spoofing Attack by nolan@exvul(https://twitter.com/ma1fan)
+this  project will public some bugs I found. follow me at X (@ma1fan)
 
-reference: https://blog.openzeppelin.com/arbitrary-address-spoofing-vulnerability-erc2771context-multicall-public-disclosure
+## Bugs
+
+ - [ERC2771 & Multicall Address Spoofing Attack](./AddressSpoofingAttack/)
 
 
 ## Usage
 
-
-
-
-
-- edit the MyContract, change the `_mint(address(0x70997970C51812dc3A010C7d01b50e0d17dc79C8), amount1);` first argument to victim address
-
-```javascript
-// src/Counter.sol
-
-contract MyContract is ERC20,ERC2771Context, Multicall {
-
-// inintal the contract owner 
-uint256 public amount1;
-address public owner;
-event Mint(address indexed to, uint256 amount);
- constructor(address trustedForwarder) ERC20("MyToken", "MTK") ERC2771Context(trustedForwarder) {
-    owner=msg.sender;
-    amount1=1000000000000000000000;
-    _mint(address(0x70997970C51812dc3A010C7d01b50e0d17dc79C8), amount1);
- }
-
-```
-- build the contracts:
-```bash
-forge build
-```
-
-- run the anvil
-
-- deploy the contracts
-
-```bash
-forge create src/Forward.sol:Forwarder --private-key=<PRIVATE_KEY>
-forge create src/Counter.sol:MyContract --private-key=<PRIVATE_KEY>  --constructor-args <FORWARD_ADDRESS>   
-```
-
-- edit the src/attack.js: change the token address, Forward address, attack address ,victim address, and privatekey and then run the command:
-
-```bash
-cd src/
-node attack.js
-```
-
-## Contracts
-
-- [`Counter.sol`](src/Counter.sol): A erc2771& multicall  contract.
-- [`ECDSA.sol`](src/ECDSA.sol): Contract for ECDSA operations.
-- [`EIP712.sol`](src/EIP712.sol): Implementation of EIP-712.
-- [`Forward.sol`](src/Forward.sol): A contract for forwarding calls.
+Explain how to use your project. For example, how to run the attack script or interact with the smart contracts.
 
 ## Contributing
 
-Contributions are welcome. Please make sure to update tests as appropriate.
+If you want others to contribute to your project, explain the process here.
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+Include information about the license here. If your project is open source, you might want to include the text of the license itself, or a link to it.
